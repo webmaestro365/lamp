@@ -12,11 +12,13 @@
 
         #logo {
                 margin-bottom: 40px;
+                /* Updated: */
+                vertical-align: middle;
         }
         </style>
 </head>
 <body>
-        <img id="logo" src="logo.png" />
+        Based on <img id="logo" src="logo.png" /><!-- Updated -->
         <h1><?php echo "Hello world!"; ?></h1>
         <?php if(!$link) { ?>
                 <h2>Can't connect to local MySQL Server!</h2>

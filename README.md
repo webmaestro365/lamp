@@ -1,29 +1,22 @@
-tutum-docker-lamp
-=================
+webmaestro365-lamp7xenial
+=========================
 
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
-
-Out-of-the-box LAMP image (PHP+MySQL)
+Out-of-the-box Xenial-based LAMP image (PHP7 + MySQL). Upgraded from tutum/lamp including this file.
 
 
 Usage
 -----
 
-To create the image `tutum/lamp`, execute the following command on the tutum-docker-lamp folder:
+To create the image `webmaestro365/lamp7xenial`, execute the following command on the folder containing the Dockerfile:
 
-	docker build -t tutum/lamp .
-
-You can now push your new image to the registry:
-
-	docker push tutum/lamp
-
+	docker build -t webmaestro365/lamp7xenial .
 
 Running your LAMP docker image
 ------------------------------
 
 Start your image binding the external ports 80 and 3306 in all interfaces to your container:
 
-	docker run -d -p 80:80 -p 3306:3306 tutum/lamp
+	docker run -d -p 80:80 -p 3306:3306 webmaestro365/lamp7xenial
 
 Test your deployment:
 
@@ -38,7 +31,7 @@ Loading your custom PHP application
 In order to replace the "Hello World" application that comes bundled with this docker image,
 create a new `Dockerfile` in an empty folder with the following contents:
 
-	FROM tutum/lamp:latest
+	FROM webmaestro365/lamp7xenial:latest
 	RUN rm -fr /app && git clone https://github.com/username/customapp.git /app
 	EXPOSE 80 3306
 	CMD ["/run.sh"]
@@ -124,4 +117,4 @@ Disabling .htaccess
     RUN a2enmod rewrite
 
 
-**by http://www.tutum.co**
+**by A. Datta based on tutum/lamp http://www.tutum.co**
