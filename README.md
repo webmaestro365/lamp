@@ -100,7 +100,7 @@ Setting a specific password for the MySQL server admin account
 If you want to use a preset password instead of a random generated one, you can
 set the environment variable `MYSQL_PASS` to your specific password when running the container:
 
-	docker run -d -p 80:80 -p 3306:3306 -e MYSQL_PASS="mypass" tutum/lamp
+	docker run -d -p 80:80 -p 3306:3306 -e MYSQL_PASS="mypass" webmaestro365/lamp7xenial
 
 You can now test your new admin password:
 
