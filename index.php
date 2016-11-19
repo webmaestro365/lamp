@@ -15,10 +15,13 @@
                 /* Updated: */
                 vertical-align: middle;
         }
+        h3 {
+			color:red;
+		}
         </style>
 </head>
 <body>
-        Based on <img id="logo" src="logo.png" /><!-- Updated -->
+        <h3>Based on </h3><img id="logo" src="logo.png" /><!-- Updated -->
         <h1><?php echo "Hello world!"; ?></h1>
         <?php if(!$link) { ?>
                 <h2>Can't connect to local MySQL Server!</h2>
